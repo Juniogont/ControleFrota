@@ -1,0 +1,29 @@
+﻿@model ControleFrota.UI.Models.ViewModels.BuscaViewModel
+
+@{
+    ViewData["Title"] = "Encontrar";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Encontrar Veículo</h1>
+
+<hr />
+<div class="row">
+    <div class="col-md-12">
+        <span class="text-danger">@ViewBag.Erro</span>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Details">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <input asp-for="chassi" class="form-control" />
+                <span asp-validation-for="chassi" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Localizar" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>

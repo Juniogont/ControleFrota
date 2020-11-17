@@ -1,0 +1,47 @@
+﻿@model IEnumerable<ControleFrota.MDL.Models.Veiculo>
+
+@{
+    ViewData["Title"] = "Listagem de Veículos";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Listagem de Veículos</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Chassi)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Tipo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NumeroPassageiros)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Cor)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Chassi)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Tipo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NumeroPassageiros)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Cor)
+            </td>
+           
+        </tr>
+}
+    </tbody>
+</table>
